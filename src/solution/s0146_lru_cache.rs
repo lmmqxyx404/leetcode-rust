@@ -80,8 +80,8 @@ impl LRUCache {
         let cache = LRUCache {
             map: map,
             cap: capacity,
-            head: unsafe { Box::into_raw(Box::new(mem::uninitialized::<LRUEntry>())) },
-            tail: unsafe { Box::into_raw(Box::new(mem::uninitialized::<LRUEntry>())) },
+            head: unsafe { Box::into_raw(Box::new(mem::MaybeUninit::uninit().assume_init())) },
+            tail: unsafe { Box::into_raw(Box::new(mem::MaybeUninit::uninit().assume_init())) },
         };
         unsafe {
             (*cache.head).next = cache.tail;
