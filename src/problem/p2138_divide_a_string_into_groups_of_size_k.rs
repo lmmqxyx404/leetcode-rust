@@ -1,11 +1,3 @@
-/*
- * @Author: Lmmqxyx
- * @Date: 2022-03-07 15:07:11
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-03-07 16:43:08
- * @FilePath: \leetcode-rust\src\problem\p2138_divide_a_string_into_groups_of_size_k.rs
- * @Description:
- */
 /**
  * [2138] Divide a String Into Groups of Size k
  *
