@@ -13,3 +13,4 @@ mod p0026_remove_duplicates_from_sorted_array;
 
 mod p0027_remove_element;
 mod p2138_divide_a_string_into_groups_of_size_k;
+mod p2169_count_operations_to_obtain_zero;
