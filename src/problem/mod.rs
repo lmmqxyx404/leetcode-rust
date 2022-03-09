@@ -19,3 +19,4 @@ mod p2176_count_equal_and_divisible_pairs_in_an_array;
 mod p2180_count_integers_with_even_digit_sum;
 mod p0094_binary_tree_inorder_traversal;
 mod p2194_cells_in_a_range_on_an_excel_sheet;
+mod p2190_most_frequent_number_following_key_in_an_array;
