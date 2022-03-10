@@ -69,12 +69,10 @@ impl Solution {
         let mut k = 0;
         while k < nums.len() {
             if k % 2 == 0 {
-                let tmp = (even[i]);
-                res.push(tmp.clone());
+                res.push(even[i]);
                 i += 1;
             } else {
-                let tmp = (odd[j]);
-                res.push(tmp.clone());
+                res.push(odd[j]);
                 j += 1;
             }
             k += 1;
@@ -91,12 +89,6 @@ mod tests {
 
     #[test]
     fn test_2164() {
-        /*
-        let mut res = Vec::new();
-        let a = &45;
-        res.push(*a);
-        assert_eq!(res[0], 45);
-        */
         assert_eq!(Solution::sort_even_odd(vec![4, 1, 2, 3]), vec![2, 3, 4, 1]);
     }
 }
