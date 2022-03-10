@@ -21,3 +21,4 @@ mod p0094_binary_tree_inorder_traversal;
 mod p2194_cells_in_a_range_on_an_excel_sheet;
 mod p2190_most_frequent_number_following_key_in_an_array;
 mod p2164_sort_even_and_odd_indices_independently;
+mod p2154_keep_multiplying_found_values_by_two;
