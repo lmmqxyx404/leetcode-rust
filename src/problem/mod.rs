@@ -27,5 +27,5 @@ mod p0946_validate_stack_sequences;
 mod p2124_check_if_all_as_appears_before_all_bs;
 mod p2108_find_first_palindromic_string_in_the_array;
 mod p0002_add_two_numbers;
-mod p1000_minimum_cost_to_merge_stones;
 mod p0100_same_tree;
+mod p0746_min_cost_climbing_stairs;
