@@ -14,6 +14,11 @@ query questionData($titleSlug: String!) {
         codeDefinition
         sampleTestCase
         metaData
+        dislikes
+        topicTags{
+            name
+            slug
+        }
     }
 }"#;
 const QUESTION_QUERY_OPERATION: &str = "questionData";
@@ -36,7 +41,9 @@ pub fn get_problem(frontend_question_id: u32) -> Option<Problem> {
                 .unwrap()
                 .json()
                 .unwrap();
+            println!("{:#?}", &resp.data.question.topic_tags);
             return Some(Problem {
+                topics:resp.data.question.topic_tags.iter().fold("".to_string(), |acc,x|acc+" "+&x.name),
                 title: problem.stat.question_title.clone().unwrap(),
                 title_slug: problem.stat.question_title_slug.clone().unwrap(),
                 code_definition: serde_json::from_str(&resp.data.question.code_definition).unwrap(),
@@ -81,7 +88,9 @@ pub async fn get_problem_async(problem_stat: StatWithStatus) -> Option<Problem> 
         return None;
     }
     let resp: RawProblem = resp.unwrap();
+    let topic_str=
     return Some(Problem {
+        topics:resp.data.question.topic_tags.iter().fold(String::from(" "), |acc,x|acc+&x.name),
         title: problem_stat.stat.question_title.clone().unwrap(),
         title_slug: problem_stat.stat.question_title_slug.clone().unwrap(),
         code_definition: serde_json::from_str(&resp.data.question.code_definition).unwrap(),
@@ -100,7 +109,7 @@ pub fn get_problems() -> Option<Problems> {
     reqwest::get(PROBLEMS_URL).unwrap().json().unwrap()
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Problem {
     pub title: String,
     pub title_slug: String,
@@ -112,9 +121,10 @@ pub struct Problem {
     pub difficulty: String,
     pub question_id: u32,
     pub return_type: String,
+    pub topics: String,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct CodeDefinition {
     pub value: String,
     pub text: String,
@@ -151,6 +161,12 @@ struct Data {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
+struct TopicTag {
+    name: String,
+    slug: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
 struct Question {
     content: String,
     stats: String,
@@ -160,6 +176,9 @@ struct Question {
     sample_test_case: String,
     #[serde(rename = "metaData")]
     meta_data: String,
+    dislikes: i32,
+    #[serde(rename = "topicTags")]
+    topic_tags: Vec<TopicTag>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

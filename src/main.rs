@@ -330,6 +330,7 @@ fn deal_problem(problem: &Problem, code: &CodeDefinition, write_mod_file: bool) 
 
     let template = fs::read_to_string("./template.rs").unwrap();
     let source = template
+        .replace("__PROBLEM_TOPICS__", &problem.topics)
         .replace("__PROBLEM_TITLE__", &problem.title)
         .replace("__PROBLEM_DESC__", &build_desc(&problem.content))
         .replace(

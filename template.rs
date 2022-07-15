@@ -3,6 +3,7 @@
  *
  * __PROBLEM_DESC__
  */
+// __PROBLEM_TOPICS__
 pub struct Solution {}__EXTRA_USE__
 
 // problem: __PROBLEM_LINK__
