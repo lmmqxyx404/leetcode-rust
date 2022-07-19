@@ -29,3 +29,4 @@ mod p2108_find_first_palindromic_string_in_the_array;
 mod p0002_add_two_numbers;
 mod p0100_same_tree;
 mod p0746_min_cost_climbing_stairs;
+mod p0118_pascals_triangle;
