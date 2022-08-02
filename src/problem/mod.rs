@@ -31,3 +31,4 @@ mod p0100_same_tree;
 mod p0746_min_cost_climbing_stairs;
 mod p0118_pascals_triangle;
 mod p0062_unique_paths;
+mod p0378_kth_smallest_element_in_a_sorted_matrix;
