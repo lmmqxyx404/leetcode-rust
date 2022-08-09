@@ -34,3 +34,5 @@ mod p0062_unique_paths;
 mod p0378_kth_smallest_element_in_a_sorted_matrix;
 
 mod p0858_mirror_reflection;
+mod p1220_count_vowels_permutation;
+mod p0823_binary_trees_with_factors;
