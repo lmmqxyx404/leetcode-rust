@@ -36,7 +36,7 @@ pub struct Solution {}
 impl Solution {
     pub fn num_factored_binary_trees(arr: Vec<i32>) -> i32 {
         use std::collections::HashMap;
-        const mod_num: i64 = 1000000007;
+        const MOD_NUM: i64 = 1000000007;
         let mut arr=arr;
         arr.sort_unstable();
         let mut mp: HashMap<i32, i64> = HashMap::new();
@@ -52,7 +52,7 @@ impl Solution {
                         if let Some(&divref) = mp.get(&div) {
                             if let Some(&jref) = mp.get(&arr[j]) {
                                 if let Some(iref) = mp.get_mut(&arr[i]) {
-                                    *iref = *iref + (divref * jref) % mod_num;
+                                    *iref = *iref + (divref * jref) % MOD_NUM;
                                 }
                             }
                         }
@@ -60,7 +60,7 @@ impl Solution {
                 }
             }
         }
-        (mp.values().sum::<i64>()%mod_num) as i32
+        (mp.values().sum::<i64>()%MOD_NUM) as i32
     }
 }
 

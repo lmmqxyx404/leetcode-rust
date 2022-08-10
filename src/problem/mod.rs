@@ -36,3 +36,5 @@ mod p0378_kth_smallest_element_in_a_sorted_matrix;
 mod p0858_mirror_reflection;
 mod p1220_count_vowels_permutation;
 mod p0823_binary_trees_with_factors;
+mod p0003_longest_substring_without_repeating_characters;
+mod p0108_convert_sorted_array_to_binary_search_tree;
