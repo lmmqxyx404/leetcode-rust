@@ -38,3 +38,5 @@ mod p1220_count_vowels_permutation;
 mod p0823_binary_trees_with_factors;
 mod p0003_longest_substring_without_repeating_characters;
 mod p0108_convert_sorted_array_to_binary_search_tree;
+mod p0098_validate_binary_search_tree;
+mod p0235_lowest_common_ancestor_of_a_binary_search_tree;
