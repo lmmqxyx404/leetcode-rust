@@ -75,7 +75,7 @@ mod tests {
 
         let mut vec = vec![];
         Solution::sort_colors(&mut vec);
-        assert_eq!(vec, vec![]);
+        assert_eq!(vec, vec![] as Vec<i32>);
 
         let mut vec = vec![2, 2, 2];
         Solution::sort_colors(&mut vec);

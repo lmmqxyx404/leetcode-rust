@@ -74,7 +74,7 @@ mod tests {
     fn test_229() {
         assert_eq!(
             Solution::majority_element(vec![1, 1, 1, 2, 2, 2, 3, 3, 3]),
-            vec![]
+            vec![] as Vec<i32>
         );
         assert_eq!(
             Solution::majority_element(vec![1, 1, 1, 2, 2, 3, 3, 3]),
@@ -82,6 +82,6 @@ mod tests {
         );
         assert_eq!(Solution::majority_element(vec![1]), vec![1]);
         assert_eq!(Solution::majority_element(vec![5, 6, 6]), vec![6]);
-        assert_eq!(Solution::majority_element(vec![1, 2, 3, 4]), vec![]);
+        assert_eq!(Solution::majority_element(vec![1, 2, 3, 4]), vec![] as Vec<i32>);
     }
 }

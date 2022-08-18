@@ -145,7 +145,7 @@ mod tests {
                     "word".to_string()
                 ]
             ),
-            vec![]
+            vec![] as Vec<i32>
         );
         assert_eq!(
             Solution::find_substring(

@@ -90,6 +90,6 @@ mod tests {
             ]
         );
         assert_eq!(Solution::subsets_with_dup(vec![1]), vec![vec![], vec![1],]);
-        assert_eq!(Solution::subsets_with_dup(vec![]), vec![vec![],]);
+        assert_eq!(Solution::subsets_with_dup(vec![]), vec![vec![],vec![1]]);
     }
 }
